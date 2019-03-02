@@ -1,0 +1,5 @@
+Message: '&bWelcome to %server !! %player'
+Title: '&bWelcome to %server !!'
+SubTitle: '%player'
+JoinMessage: '&e%player has joined  online:%online'
+QuitMessage: '&e%player left the game  online:%online'
