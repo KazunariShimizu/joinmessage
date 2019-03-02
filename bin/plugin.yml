@@ -1,0 +1,5 @@
+name: JoinMessage
+main: jp.mydns.toraden.joinmessage.Main
+version: 0.1
+author: toradencom
+description: JoinMessage
