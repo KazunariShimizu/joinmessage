@@ -1,5 +1,7 @@
 package jp.mydns.toraden.joinmessage;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -29,5 +31,14 @@ public class Main extends JavaPlugin implements Listener {
 		}else {
 			e.setJoinMessage("プレイヤーが初めてログインしました: " + e.getPlayer().getName());
 		}
+	}
+	
+	@Override
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		if (label.equalsIgnoreCase("2019vote")) {
+			sender.sendMessage("投票が行われました。");
+		}
+		
+		return true;
 	}
 }
