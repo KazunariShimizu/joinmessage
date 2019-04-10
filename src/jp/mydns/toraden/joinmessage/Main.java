@@ -39,7 +39,11 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onEnderDragonDeath(EntityDeathEvent e) {
 		if (e.getEntity() instanceof EnderDragon) {
-			Bukkit.broadcastMessage("エンダードラゴンが死にました");
+			// Bukkit.broadcastMessage("エンダードラゴンが死にました");
+            Player p = e.getEntity().getKiller();
+
+            // DiscordSRVの仕様上おそらくPlayerの発言に見せかけないとDiscordに表示しない
+            p.sendMessage(e.getEntity().getWorld().getName() + "のエンダードラゴンが駆除されました");
 		}
 	}
 	
