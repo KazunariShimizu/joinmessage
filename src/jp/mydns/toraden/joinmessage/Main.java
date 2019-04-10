@@ -47,6 +47,8 @@ public class Main extends JavaPlugin implements Listener {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (label.equalsIgnoreCase("2019vote")) {
 			sender.sendMessage("投票が行われました。");
+		} else if (label.equalsIgnoreCase("vote")) {
+			sender.sendMessage("https://minecraft.jp/servers/mc.toraden.com/vote");
 		}
 		
 		return true;

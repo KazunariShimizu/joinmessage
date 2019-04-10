@@ -5,3 +5,5 @@ author: toradencom
 description: JoinMessage
 commands:
   2019vote:
+  vote:
+    description: show toraden.com JMS vote link
