@@ -43,7 +43,7 @@ public class Main extends JavaPlugin implements Listener {
             Player p = e.getEntity().getKiller();
 
             // DiscordSRVの仕様上おそらくPlayerの発言に見せかけないとDiscordに表示しない
-            p.sendMessage(e.getEntity().getWorld().getName() + "のエンダードラゴンが駆除されました");
+            p.chat(e.getEntity().getWorld().getName() + "のエンダードラゴンを処刑しました");
 		}
 	}
 	
