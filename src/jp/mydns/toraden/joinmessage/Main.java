@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -29,10 +30,17 @@ public class Main extends JavaPlugin implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
 		if(p.hasPlayedBefore()) {
-			e.setJoinMessage("プレイヤーがログインしました: " + e.getPlayer().getName());
+			e.setJoinMessage(null);
 		}else {
-			e.setJoinMessage("プレイヤーが初めてログインしました: " + e.getPlayer().getName());
+			e.setJoinMessage(null);
 		}
+		
+	}
+	@EventHandler
+	public void onPlayerJoin(PlayerQuitEvent e) {
+		Player p = e.getPlayer();
+			e.setQuitMessage(null);
+		
 	}
 
 	@EventHandler
@@ -48,7 +56,7 @@ public class Main extends JavaPlugin implements Listener {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (label.equalsIgnoreCase("2019vote")) {
+		if (label.equalsIgnoreCase("2020vote")) {
 			sender.sendMessage("投票が行われました。");
 		} else if (label.equalsIgnoreCase("vote")) {
 			sender.sendMessage("https://minecraft.jp/servers/mc.toraden.com/vote");
